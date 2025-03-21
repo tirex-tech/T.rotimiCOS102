@@ -1,0 +1,17 @@
+def simple_interest(P, R, T):
+    return P * (1 + (R / 100) * T)
+
+def compound_interest(P, R, n, T):
+    return P * (1 + R / (100 * n))(n * T)
+
+def annuity_plan(PMT, R, n, T):
+    R = R / (100 * n)
+    return PMT * ((1 + R)(n * T) - 1) / R
+
+# Example values
+P, R, T, n, PMT = 1000, 5, 3, 4, 200
+
+# Calculate results
+print(f"Simple Interest: {simple_interest(P, R, T):.2f}")
+print(f"Compound Interest: {compound_interest(P, R, n, T):.2f}")
+print(f"Annuity Plan: {annuity_plan(PMT, R, n, T):.2f}")
